@@ -1,0 +1,65 @@
+.contenu {
+  min-width: 335px;
+  box-shadow: 0px 0px 20px 8px #23272cc0;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+body {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 40%), rgba(0, 0, 0, 40%)), url("logonew.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: contain;  
+  background-color: white !rgb(54, 98, 139);
+  margin: 0px;
+  font-family: Arial;
+  font-size: 0px;  
+  overflow: visible;
+  color:rgb(255, 199, 109) !important;
+}
+
+h2 {
+  font-size: 12px;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+.centre {
+  text-align: center;
+  width: 100%;
+}
+
+th.datas {
+  text-align: left;
+  padding-left: 20px;
+}
+
+th.var {
+  text-align: right;
+}
+
+th {
+  font-size: 40px;
+  width: 45%
+}
+
+div.tableau {
+  font-size: 50px;
+  position: relative;
+  text-align: center;
+  width: 90%;
+  color: rgb(255, 199, 109);
+  margin: 0px 20px 30px 20px;
+  display: inline-block;
+  font-weight: bold;
+  overflow: visible;
+  padding: 0px 2px 0px 2px;
+  height: max-content;
+}
+
+p {
+  margin: 0px;
+}

@@ -1,0 +1,85 @@
+<!doctype html>
+<html  lang='fr'>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript">
+    </script>
+      
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+          update_datas();
+
+          function update_datas() {
+              $.ajax({
+                      url: '/get_datas',
+                      dataType: 'json'
+                  })
+                  .done(function(data) {
+                      console.log(data);
+                      $('#AcX').html(data.AcX);
+                      $('#AcY').html(data.AcY);
+                      $('#AcZ').html(data.AcZ);
+                      $('#Tmp').html(data.Tmp);
+                      $('#GyX').html(data.GyX);
+                      $('#GyY').html(data.GyY);
+                      $('#GyZ').html(data.GyZ);
+                      setTimeout(update_datas, 500);
+                  });
+          }
+      });
+    </script>
+    
+    <meta charset='UTF-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Capteur MPU6050</title>
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+
+  <body>
+
+
+    <div class="contenu">
+
+      <h1 class="centre">Capteur accel/gyro</h1>
+      
+      <div class="tableau">
+        <div>
+          <table class="centre">
+              <tr>
+                  <th class="var">AcX:</th>
+                  <th class="datas" id="AcX">0.00</th>
+              </tr>
+              <tr>
+                  <th class="var">AcY:</th>
+                  <th class="datas" id="AcY">0.00</th>
+              </tr>
+              <tr>
+                  <th class="var">AcZ:</th>
+                  <th class="datas" id="AcZ">0.00</th>
+              </tr>
+              <tr>
+                  <th class="var">Tmp:</th>
+                  <th class="datas" id="Tmp">0.00</th>
+              </tr>
+              <tr>
+                  <th class="var">GyX:</th>
+                  <th class="datas" id="GyX">0.00</th>
+              </tr>
+              <tr>
+                  <th class="var">GyY:</th>
+                  <th class="datas" id="GyY">0.00</th>
+              </tr>
+              <tr>
+                  <th class="var">GyZ:</th>
+                  <th class="datas" id="GyZ">0.00</th>
+              </tr>
+          </table>
+        </div>
+      </div>
+      <h2 class="centre">capteur MPU6050 - MicroPython V1.18 sur module ESP32-S2 TTGO T-Display</h2>
+      <h2 class="centre">Développeur : Roel Jaspers</h2>
+    </div>
+  </body>
+</html>
