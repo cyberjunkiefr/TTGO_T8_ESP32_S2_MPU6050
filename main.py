@@ -103,7 +103,19 @@ def image(req, resp):
     except Exception:
         print("Image file not found.")
         pass
-    
+
+@app.route("/favicon.ico")
+def image(req, resp):
+    print("Download ICO")
+    yield from picoweb.start_response(resp)
+    try:
+        with open("web/favicon.ico", 'rb') as img_binary:
+            img= img_binary.read()
+        yield from resp.awrite(img)
+    except Exception:
+        print("Image file not found.")
+        pass
+
 #---------MAIN---------------------    
 ipaddress, ap = connection(ssid='Roel_Was_Here', password='Rj060195', name='MPU6050_Test')
 if ipaddress:
