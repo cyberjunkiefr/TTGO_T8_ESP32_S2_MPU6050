@@ -39,6 +39,8 @@ def initMPU():
 def inittft(firstline=50,separation=20):
     global ipaddress
     tft.text(vga1_bold_16x32, "DATAS:", 6, 10, st7789.CYAN)
+    tft.hline(0,42,135,st7789.RED)
+    tft.hline(0,43,135,st7789.RED)
     tft.text(vga1_8x16, "AcX:", 6, firstline, st7789.GREEN)
     tft.text(vga1_8x16, "AcY:", 6, firstline + 1 * separation, st7789.GREEN)
     tft.text(vga1_8x16, "AcZ:", 6, firstline + 2 * separation, st7789.GREEN)
